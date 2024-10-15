@@ -217,8 +217,12 @@ public class TableroSimpsonFuncional {
     imprimirTablero();
     
     
-    }while (vidas > 0);
-
+    } while (vidas > 0 && tablero[filaBart][columnaBart] != 'F');
+        if (vidas <= 0) {
+            System.out.println("Has perdido todas las vidas. GAME OVER.");
+        } else if (tablero[filaBart][columnaBart] == 'F') {
+            System.out.println("¡Has llegado a la meta! ¡Felicitaciones!");
+        }
 }
 
 }
