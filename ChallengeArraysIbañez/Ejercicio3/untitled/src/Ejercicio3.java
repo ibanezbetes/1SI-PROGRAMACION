@@ -1,4 +1,6 @@
 import java.util.Random;
+import java.util.Scanner;
+
 public class Ejercicio3 {
     //array de 6 nums, peddir al usuario 3 nums y si existen los tacho con XX, sino; imprimo pantalla
     public static void main(String[] args) {
@@ -9,7 +11,7 @@ public class Ejercicio3 {
             arrayNumeroAleatorio[j] = random.nextInt(100) + 1;
             System.out.println(arrayNumeroAleatorio[j] + ", ");
         }
-
+        
 
 
     }
