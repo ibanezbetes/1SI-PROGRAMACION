@@ -49,23 +49,6 @@ public class TableroSimpsonFuncional {
     }
 
     
-
-//    private static void asignarCaracterACasillasLibres(char caracter){
-//        int filaAleatorioHomer;
-//        int columnaAleatorioHomer;
-//        //int filaAleatorioMuro;
-//        //int columnaAleatorioMuro;        
-//        Random aleatorio = new Random();
-//        for (int i = 0; i < 10; i++) {
-//      do { //esto lo hace mientras la casilla sea diferente a L
-//            filaAleatorioHomer = aleatorio.nextInt(MAX_FILA_TABLERO); //De 0 a N-1
-//              columnaAleatorioHomer = aleatorio.nextInt(MAX_COLUMNA_TABLERO); //De 0 a N-1
-//            }while (tablero[filaAleatorioHomer][columnaAleatorioHomer]!='L');
-//            //esto de abajo lo ejecutará cuando la casilla sea = L (pondrá H en la casilla)
-//            tablero[filaAleatorioHomer][columnaAleatorioHomer] = caracter;
-//        }
-//    }
-    
     public static void main(String[] args) {
         //1º inicializo matriz tablero
         tablero = new char[MAX_FILA_TABLERO][MAX_COLUMNA_TABLERO];
@@ -86,9 +69,6 @@ public class TableroSimpsonFuncional {
         // W - ARRIBA
         // S - ABAJO
     Scanner lector = new Scanner(System.in);
-    //************************************ */
-    /*BLOQUE DE JUGAR */
-    //************************************ */
     int vidas = 3;    
     do {
             System.out.println("JUGAR");
@@ -215,8 +195,6 @@ public class TableroSimpsonFuncional {
             break;
     }
     imprimirTablero();
-    
-    
     } while (vidas > 0 && tablero[filaBart][columnaBart] != 'F');
         if (vidas <= 0) {
             System.out.println("Has perdido todas las vidas. GAME OVER.");
@@ -224,5 +202,4 @@ public class TableroSimpsonFuncional {
             System.out.println("¡Has llegado a la meta! ¡Felicitaciones!");
         }
 }
-
 }
