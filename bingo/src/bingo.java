@@ -77,10 +77,21 @@ public class bingo {
         return false;  // Si no se encuentra, devolvemos false
     }
 
+    public static void imprimirArrayGanadora() {
+        System.out.println("..........................");
+        System.out.println("Los números ganadores son: ");
+        for (int i=0; i < ganadores.length; i++) {
+                System.out.print(ganadores[i] + ", ");
+            }
+            System.out.println();
+        }
+
     public static void main(String[] args) {
         definirArray();
+        definirArrayGanadora();
         generarNumCarton();
         ordenarColumnas();
         imprimirArray();
+        imprimirArrayGanadora();
     }
 }
