@@ -7,11 +7,15 @@ public class bingo {
     static int tablero[][] = new int[MAX_FILA][MAX_COLUMNA];
     static int ganadores[] = new int[15];
     static int numCarton = 0;
-
+        //
         // F7 va a la función en cuestion en el modo debug
         // en modo debug F8 para pasar de linea
         // F9 salta de función
-    
+        //
+        //
+        // en un switch, dentro de un case
+        // case 'A','a': (se cumpliria el case con cualquiera de los dos caracteres)
+        //
     static void definirArray() {
         boolean filasLlenas;
         do {

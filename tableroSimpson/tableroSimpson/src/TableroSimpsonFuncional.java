@@ -5,8 +5,23 @@ public class TableroSimpsonFuncional {
     private static final int MAX_FILA_TABLERO = 10;
     private static final int MAX_COLUMNA_TABLERO = 10;
     private static char[][] tablero;
+    public static char[][] ejesCoordenadasMovimiento;
     private static int filaBart;
     private static int columnaBart;
+
+    private static void setEjesCoordenadasMovimiento(){
+        ejesCoordenadasMovimiento[0][0] == 0;
+        ejesCoordenadasMovimiento[0][1] == 0;
+        ejesCoordenadasMovimiento[0][2] == 1;
+        ejesCoordenadasMovimiento[0][3] == -1;
+        ejesCoordenadasMovimiento[0][4] == 1;
+        ejesCoordenadasMovimiento[1][0] == 1;
+        ejesCoordenadasMovimiento[1][1] == -1;
+        ejesCoordenadasMovimiento[1][2] == 0;
+        ejesCoordenadasMovimiento[1][3] == 0;
+        ejesCoordenadasMovimiento[1][4] == 1;
+
+    }
 
     private static void imprimirTablero(){
         for (int i = 0; i < MAX_FILA_TABLERO; i++) {
@@ -71,13 +86,22 @@ public class TableroSimpsonFuncional {
     Scanner lector = new Scanner(System.in);
     int vidas = 3;    
     do {
-            System.out.println("JUGAR");
-            System.out.println("Introduce el desplazamiento");
-            System.out.println("A - IZQUIERDA, D - DERECHA, W - ARRIBA, S - ABAJO");
-            String desplazamiento = lector.nextLine();
-            System.out.println("Desplazamiento=" + desplazamiento);
-
-
+        System.out.println("JUGAR");
+        System.out.println("Introduce el desplazamiento");
+        System.out.println("A - IZQUIERDA, D - DERECHA, W - ARRIBA, S - ABAJO");
+        String desplazamiento = lector.nextLine();
+        System.out.println("Desplazamiento=" + desplazamiento);
+        //
+        // para hacer un proceso límites de tablero
+        // private static boolean siFueraTablero(int x[fila], int y[columna]) {
+        // if(filaBart<0 || filaBart>9 || columnaBart<0 || filaBart>9){
+        // return true;
+        // } else return false;
+        //
+        // debajo de cada case:
+        // if(siFueraTablero()){
+        // }
+        //
     switch (desplazamiento) {
         case "A":
             // A - IZQUIERDA
@@ -101,8 +125,6 @@ public class TableroSimpsonFuncional {
                     
                     default:
                 }
-                
-                                
             }else  {
                 System.out.println("No se puede ir a la izquierda.");
             }            
