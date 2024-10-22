@@ -8,7 +8,11 @@ public class bingo {
     static int ganadores[] = new int[15];
     static int numCarton = 0;
 
-    public static void definirArray() {
+        // F7 va a la función en cuestion en el modo debug
+        // en modo debug F8 para pasar de linea
+        // F9 salta de función
+    
+    static void definirArray() {
         boolean filasLlenas;
         do {
             filasLlenas = true;  // suponemos q todas las filas estan llenas
