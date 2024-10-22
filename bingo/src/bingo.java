@@ -1,5 +1,5 @@
 import java.util.Random;
-
+//array de 10 dimensiones con numeros random
 public class bingo {
     static Random aleatorio = new Random();
     static final int MAX_FILA = 3;
@@ -30,7 +30,7 @@ public class bingo {
                 if (tablero[fila][columna] == -1) {
                     do {
                         randomizado = aleatorio.nextInt(10) + (columna * 10);  // generar número en su decena
-                                                                                    // correcta según la columna
+                        // correcta según la columna
                     } while (comprobarRepetido(randomizado));  // llamamos al proceso para q no se repita ninguno
                     randomizado += 10;
                     // comprobamos si el numero ya está en el array tablero
@@ -55,10 +55,10 @@ public class bingo {
         boolean repetido;
         int randomizado;
         for (int i=0; i < 15; i++) {
-                do {
-                    randomizado = aleatorio.nextInt(90) + 10;
-                } while (comprobarRepetidoGanadores(randomizado));  // comprobamos si ya está en el array
-                ganadores[i] = randomizado;
+            do {
+                randomizado = aleatorio.nextInt(90) + 10;
+            } while (comprobarRepetidoGanadores(randomizado));  // comprobamos si ya está en el array
+            ganadores[i] = randomizado;
         }
     }
 
@@ -91,7 +91,7 @@ public class bingo {
                         int numeroTemporal = tablero[i][j];
                         tablero[i][j] = tablero[k][j];
                         tablero[k][j] = numeroTemporal;
-            // troncho de corchetes abajo
+                        // troncho de corchetes abajo
                     }
                 }
             }
@@ -111,9 +111,9 @@ public class bingo {
 
     public static boolean comprobarRepetidoGanadores (int randomizado) {
         for (int i = 0; i < MAX_FILA; i++) {
-                if (ganadores[i] == randomizado) {
-                    return true;  // si se encuentra el número, devolvemos true al booleano
-                }
+            if (ganadores[i] == randomizado) {
+                return true;  // si se encuentra el número, devolvemos true al booleano
+            }
         }
         return false;  // si no es asi devolvemos false
     }
@@ -122,13 +122,13 @@ public class bingo {
         System.out.println("..........................");
         System.out.println("Los números ganadores son: ");
         for (int i=0; i < ganadores.length; i++) {
-                System.out.print(ganadores[i] + " ");
+            System.out.print(ganadores[i] + " ");
             if (i == 4 || i == 9 || i ==14) {
                 System.out.println("");
             }
-            }
-            System.out.println();
         }
+        System.out.println();
+    }
 
     public static void contarAciertos() {
         int aciertos = 0;
