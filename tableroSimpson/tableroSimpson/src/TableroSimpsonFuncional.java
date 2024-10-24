@@ -9,7 +9,7 @@ public class TableroSimpsonFuncional {
     private static int filaBart;
     private static int columnaBart;
 
-    private static void setEjesCoordenadasMovimiento(){
+   /* private static void setEjesCoordenadasMovimiento(){
         ejesCoordenadasMovimiento[0][0] == 0;
         ejesCoordenadasMovimiento[0][1] == 0;
         ejesCoordenadasMovimiento[0][2] == 1;
@@ -22,7 +22,7 @@ public class TableroSimpsonFuncional {
         ejesCoordenadasMovimiento[1][4] == 1;
 
     }
-
+*/
     private static void imprimirTablero(){
         for (int i = 0; i < MAX_FILA_TABLERO; i++) {
             for (int j = 0; j < MAX_COLUMNA_TABLERO; j++) {
