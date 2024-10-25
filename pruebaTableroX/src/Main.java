@@ -64,11 +64,10 @@ public class Main {
                 for (int j = 0; j < MAX_COLUMNA; j++) {
                     if (tableroNumeros[i][j] == numeroUsuario) {
                         tableroX[i][j] = numeroUsuario;
-                        imprimirArray(tableroGanador);
                     }
                 }
             }
-
+            imprimirArray(tableroGanador);
         }
     }
 
